@@ -1,0 +1,8 @@
+name = "helius-webhook"
+main = "src/worker.js"
+workers_dev = true
+compatibility_date = "2025-08-14"
+
+[observability]
+enabled = true
+head_sampling_rate = 1
