@@ -17,3 +17,13 @@ Important: If you first run this DEMO,write HELIUS_RPC_URL directly in the worke
 
 Make sure the cloudFare worker and Hlius webhook have been estbliash.And you can see the log info on CloudFlare website.
 
+2.enhancedWebsocket
+
+This is a listen function use the geyser-enhanced transactionSubscribe method.
+
+It is alse reference the article above.
+
+To run it ,you need custome the config too and a Helius Business or Professional plans.
+
+Finally,  please run  :  
+ npm install && npm start   
