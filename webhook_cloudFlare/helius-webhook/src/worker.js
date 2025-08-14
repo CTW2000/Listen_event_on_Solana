@@ -1,15 +1,19 @@
-/**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run "npm run dev" in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run "npm run deploy" to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/
- */
+const config = require('../config');
 
-export default {
-  async fetch(request, env, ctx) {
-    return new Response('Hello World!');
-  }
-};
+const HELIUS_API_KEY = config.HELIUS_API_KEY;
+const HELIUS_RPC_URL = config.HELIUS_RPC_URL;
+
+addEventListener('fetch', event => {
+    event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+    if (request.method === 'POST') {
+        const requestBody = await request.json();
+        console.log(requestBody[0].description);
+
+        return new Response('Logged POST request body.', { status: 200 });
+    } else {
+        return new Response('Method not allowed.', { status: 405 });
+    }
+}
