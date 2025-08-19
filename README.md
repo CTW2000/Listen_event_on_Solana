@@ -14,7 +14,7 @@ How to run it:
 `cd webhook_cloudFlare/helius-webhook`
 
 
-2. Custome your own config in config.js ,you can reference the [config-example.js](/webhook_cloudFlare/config-example.js)
+2. Custome your own config in config.js ,you can reference the [config-example.js](/webhook_cloudFlare/helius-webhook/config-example.js)
 
 > ⚠️ **Important**: If you first run this DEMO,write `HELIUS_RPC_URL` directly in the `worker.js` file. Once it works, you can switch it back to use the config file.
 
